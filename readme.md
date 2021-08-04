@@ -30,6 +30,16 @@ const str = "Double quote string"
 const str: string = "Double quote string"
 ```
 
+###### Template literals
+
+```ts
+const str = `4 + 5 = ${4 + 5}`
+```
+
+```ts
+const str: string = `4 + 5 = ${4 + 5}`
+```
+
 ### Number
 
 Numbers in TypeScript are the same as numbers in JavaScript: they enable you to represent floating point numbers. Numbers can either be typed as `number` or `bigint`.
