@@ -4,14 +4,20 @@ TypeScript declaration files are used to declare the types of variables, functio
 
 ## Basic Types
 
+All examples will use implicit typing followed by explicit typing.
+
 ### String
 
-Strings in TypeScript are the same as strings in JavaScript: they enable you to represent textual data. You can use single quotes or double quotes to create strings.
+Strings in TypeScript are the same as strings in JavaScript: they enable you to represent textual data and are denoted by quotes. You can use single quotes or double quotes to create strings.
 
 ###### Single quoted strings
 
 ```ts
 const str = 'Single quote string'
+```
+
+```ts
+const str: string = 'Single quote string'
 ```
 
 ###### Double quoted strings
@@ -20,12 +26,8 @@ const str = 'Single quote string'
 const str = "Double quote string"
 ```
 
-###### Explicit anotation
-
-The type anontation is not required as it is implied by the quotes. You can explicitly specify the type of a string using the `string` keyword.
-
 ```ts
-const str: string = 'Explicitly typed'
+const str: string = "Double quote string"
 ```
 
 ### Number
@@ -34,12 +36,10 @@ Numbers in TypeScript are the same as numbers in JavaScript: they enable you to 
 
 ###### Number
 
-Implicitly typed
 ```ts
 const n = 10
 ```
 
-Explicitly typed
 ```ts
 const n: number = 10
 ```
@@ -48,4 +48,8 @@ const n: number = 10
 
 ```ts
 const bigN = 50n
+```
+
+```ts
+const bigN: bigint = 4n
 ```
