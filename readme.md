@@ -51,7 +51,8 @@ const bigN = 50n
 ```
 
 ```ts
-const bigN: bigint = 4n
+const bigN: bigint = 50n
+```
 
 ### Boolean
 
