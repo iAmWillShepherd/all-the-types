@@ -52,4 +52,15 @@ const bigN = 50n
 
 ```ts
 const bigN: bigint = 4n
+
+### Boolean
+
+Booleans in TypeScript are the same as booleans in JavaScript: they enable you to represent logical values.
+
+```ts
+const isTrue = false
+```
+
+```ts
+const isTrue: boolean = false
 ```
