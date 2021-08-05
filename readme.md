@@ -92,7 +92,7 @@ const obj: object = {
 }
 ```
 
-### Function
+## Functions
 
 Functions allow you to define code blocks that can be called later. You can define both input and output types for functions.
 
@@ -126,11 +126,11 @@ function add(a: number, b: number) {
 const add = (a: number, b: number) => a + b
 ```
 
-### Reusable types
+## Reusable types
 
 You can create types that can be reused in multiple places in your code.
 
-#### Type aliasing
+### Type aliasing
 
 Type aliases allow you to name a type or assign it a new name. These are useful when you want to reuse a type in multiple places in your code.
 
@@ -170,7 +170,7 @@ const getUser = (id: UserId): User => {
 }
 ```
 
-#### Interfaces
+### Interfaces
 
 Interfaces are very similar to type aliases.
 
