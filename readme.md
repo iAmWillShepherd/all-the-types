@@ -204,16 +204,20 @@ type AuthenticatedUser = User & {
 
 ### Optional modifier
 
-You can mark a type as optional by adding the `?` modifier. This allows for a variable to be `undefined` or the type preceding the optional modifier.
+You can mark a property or parameter as optional by adding the `?` modifier. Optionals will have a value of `undefined` if not set.
+
+###### Parameter
 
 ```ts
-let optional?: string
+function log(message: string, options?: { prettyPrint: boolean}) {
+  //...
+}
 ```
 
-This can also be used with reusable types.
+###### Property
 
 ```ts
-type User = {
+interface User = {
   id: string
   lastLogin?: Date
   socialMediaUrls: string[]
