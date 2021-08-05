@@ -172,3 +172,50 @@ const getUser = (id: UserId): User => {
 
 #### Interfaces
 
+Interfaces are very similar to type aliases.
+
+```ts
+interface User = {
+  id: string
+  lastLogin: Date
+  socialMediaUrls: string[]
+}
+```
+
+###### Extending an interface
+
+The difference between the two is that interfaces can be extended with additional properties whereas a type alias cannot.
+
+```ts
+interface AuthenticatedUser extends User {
+  addSocialUrl: (url: string) => void
+}
+```
+
+###### Type intersections
+
+Although types cannot be extended, you can create a new type from old types to get similar functionality. Note that you cannot extend the type though, only create a new one.
+
+```ts
+type AuthenticatedUser = User & {
+  addSocialUrl: (url: string) => void
+}
+```
+
+### Optional modifier
+
+You can mark a type as optional by adding the `?` modifier. This allows for a variable to be `undefined` or the type preceding the optional modifier.
+
+```ts
+let optional?: string
+```
+
+This can also be used with reusable types.
+
+```ts
+type User = {
+  id: string
+  lastLogin?: Date
+  socialMediaUrls: string[]
+}
+```
