@@ -75,3 +75,20 @@ const isTrue = false
 ```ts
 const isTrue: boolean = false
 ```
+
+### Object
+
+Objects are values that contain named property value pairs and denoted by curly braces.
+
+```ts
+const obj = {
+  property: "value"
+}
+```
+
+```ts
+const obj: object = {
+  property: "value"
+}
+```
+
