@@ -92,3 +92,37 @@ const obj: object = {
 }
 ```
 
+### Function
+
+Functions allow you to define code blocks that can be called later. You can define both input and output types for functions.
+
+###### Function declaration
+
+```ts
+function add(a: number, b: number): number {
+  return a + b
+}
+```
+
+##### Arrow function
+
+```ts
+const add = (a: number, b: number): number => a + b
+```
+
+
+
+###### Type inferencing
+
+TypeScript infers the return type of the function from the function body.
+
+```ts
+function add(a: number, b: number) {
+  return a + b
+}
+```
+
+```ts
+const add = (a: number, b: number) => a + b
+```
+
