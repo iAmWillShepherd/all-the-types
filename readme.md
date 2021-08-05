@@ -130,7 +130,7 @@ const add = (a: number, b: number) => a + b
 
 You can create types that can be reused in multiple places in your code.
 
-###### Type aliasing
+#### Type aliasing
 
 Type aliases allow you to name a type or assign it a new name. These are useful when you want to reuse a type in multiple places in your code.
 
@@ -169,4 +169,6 @@ const getUser = (id: UserId): User => {
   //...
 }
 ```
+
+#### Interfaces
 
