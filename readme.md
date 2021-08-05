@@ -126,3 +126,47 @@ function add(a: number, b: number) {
 const add = (a: number, b: number) => a + b
 ```
 
+### Reusable types
+
+You can create types that can be reused in multiple places in your code.
+
+###### Type aliasing
+
+Type aliases allow you to name a type or assign it a new name. These are useful when you want to reuse a type in multiple places in your code.
+
+###### Primitive type
+
+Sometimes, you may want to refer to a primitive type using nouns in your domain. For example, you may want to refer to a `number` or `string` as `UserId`.
+
+```ts
+type UserId = string
+```
+
+###### Complex type
+
+Other times, you may want to name a complext type to make your code easier to reason with.
+
+```ts
+const getUser = (id: string): {
+  id: string,
+  lastLogin: Date,
+  socialMediaUrls: string[]
+} => {
+  //...
+}
+```
+
+**vs**
+
+```ts
+type User = {
+  id: string
+  lastLogin: Date
+  socialMediaUrls: string[]
+}
+
+const getUser = (id: UserId): User => {
+  //...
+}
+```
+
