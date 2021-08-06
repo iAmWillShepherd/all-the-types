@@ -21,9 +21,11 @@
     "strict": false,
     "target": "es5",
     "declaration": true,
+    "baseUrl": "./",
+    "paths": { "@animals/*": ["src/animals/*"] },
     "declarationDir": "build/types",
     "typeRoots": ["./node_modules/@types", "./lodash"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/animals/**/*"],
   "exclude": ["node_modules"]
 }
