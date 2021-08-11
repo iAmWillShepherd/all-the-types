@@ -202,6 +202,22 @@ type AuthenticatedUser = User & {
 }
 ```
 
+###### Union types
+
+You can combine multiple types into a single type using union types. This is useful when you want to represent a type that can be one of several types known as _members_
+
+```ts
+type APIResponse =
+  | {
+      success: false
+      error: Error
+    }
+  | {
+      success: true
+      data: any
+    }
+```
+
 ### Optional modifier
 
 You can mark a property or parameter as optional by adding the `?` modifier. Optionals will have a value of `undefined` if not set.
