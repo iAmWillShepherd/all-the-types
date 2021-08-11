@@ -23,11 +23,11 @@ const str: string = 'Single quote string'
 ###### Double quoted strings
 
 ```ts
-const str = "Double quote string"
+const str = 'Double quote string'
 ```
 
 ```ts
-const str: string = "Double quote string"
+const str: string = 'Double quote string'
 ```
 
 ###### Template literals
@@ -82,13 +82,13 @@ Objects are values that contain named property value pairs and denoted by curly 
 
 ```ts
 const obj = {
-  property: "value"
+  property: 'value',
 }
 ```
 
 ```ts
 const obj: object = {
-  property: "value"
+  property: 'value',
 }
 ```
 
@@ -109,8 +109,6 @@ function add(a: number, b: number): number {
 ```ts
 const add = (a: number, b: number): number => a + b
 ```
-
-
 
 ###### Type inferencing
 
@@ -147,9 +145,11 @@ type UserId = string
 Other times, you may want to name a complext type to make your code easier to reason with.
 
 ```ts
-const getUser = (id: string): {
-  id: string,
-  lastLogin: Date,
+const getUser = (
+  id: string
+): {
+  id: string
+  lastLogin: Date
   socialMediaUrls: string[]
 } => {
   //...
@@ -225,7 +225,7 @@ You can mark a property or parameter as optional by adding the `?` modifier. Opt
 ###### Parameter
 
 ```ts
-function log(message: string, options?: { prettyPrint: boolean}) {
+function log(message: string, options?: { prettyPrint: boolean }) {
   //...
 }
 ```
