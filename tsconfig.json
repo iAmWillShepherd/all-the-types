@@ -24,8 +24,8 @@
     "baseUrl": "./",
     "paths": { "@animals/*": ["src/animals/*"] },
     "declarationDir": "build/types",
-    "typeRoots": ["./node_modules/@types", "./lodash"]
+    "typeRoots": ["./node_modules/@types", "src/typeDeclarations"]
   },
-  "include": ["src/**/*", "src/animals/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
