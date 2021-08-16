@@ -1,6 +1,6 @@
 import { GluegunCommand } from 'gluegun'
 import * as _ from 'lodash'
-import { Animal, RandomAnimal } from '../animals/RandomAnimal';
+import { Animal, RandomAnimal } from 'tsconf-animals';
 
 const command: GluegunCommand = {
   name: 'all-the-types',
