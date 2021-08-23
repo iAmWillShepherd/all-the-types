@@ -1,3 +1,40 @@
+## Table of Contents
+- [Typescript Declaration Files](#typescript-declaration-files)
+  * [Basic Types](#basic-types)
+    + [String](#string)
+          + [Single quoted strings](#single-quoted-strings)
+          + [Double quoted strings](#double-quoted-strings)
+          + [Template literals](#template-literals)
+    + [Number](#number)
+          + [Number](#number-1)
+          + [BigInt](#bigint)
+    + [Boolean](#boolean)
+    + [Object](#object)
+  * [Functions](#functions)
+          + [Function declaration](#function-declaration)
+        * [Arrow function](#arrow-function)
+          + [Type inferencing](#type-inferencing)
+  * [Reusable types](#reusable-types)
+    + [Type aliasing](#type-aliasing)
+          + [Primitive type](#primitive-type)
+          + [Complex type](#complex-type)
+    + [Interfaces](#interfaces)
+          + [Extending an interface](#extending-an-interface)
+          + [Type intersections](#type-intersections)
+          + [Union types](#union-types)
+    + [Optional modifier](#optional-modifier)
+          + [Parameter](#parameter)
+          + [Property](#property)
+- [Workshop Project](#workshop-project)
+  * [Let's get started](#let-s-get-started)
+  * [Animals Reference](#animals-reference)
+    + [`Animal`](#-animal-)
+    + [`AnimalGroup`](#-animalgroup-)
+    + [`Bird`](#-bird-)
+    + [`Fish`](#-fish-)
+    + [`Mammal`](#-mammal-)
+    + [`Reptile`](#-reptile-)
+
 # Typescript Declaration Files
 
 TypeScript declaration files are used to declare the types of variables, functions, classes, etc. in a TypeScript program. In order to write TypeScript declaration files, you must first understand the basic types of TypeScript. As such, this workshop will start with a primer on the type system before getting into the details of writing declaration files.
@@ -239,3 +276,38 @@ interface User = {
   socialMediaUrls: string[]
 }
 ```
+
+---
+
+# Workshop Project
+
+The purpose of this project is to help you understand how to write declaration files for Javascript libraries or your own code. As mentioned in the video, this project is a simple CLI that provides information on various animals. The animals are generated randomly via the `tsconf-animals` npm package, henceforth known as the "Animals" library.
+
+The Animals library does not come with any typings. Part of your job in this workshop is to try to add typings for the library. This README will provide you with all the documentation you need to add the correct types.
+
+Furthermore, the workshop makes use of the popular [`lodash`](https://lodash.com/docs/4.17.15) library. Since the `lodash` library does have existing type declarations, make sure not to use them in order to complete the exercise. You can use them as reference if you get stuck or to check your work later.
+
+## Let's get started
+1. Clone this repository to your machine
+2. Open the files `src/commands/all-the-types.ts` and the `src/typeDeclarations` directory declaration files in a code editor with Typescript support. These are the main files you will be working with.
+3. Begin. Your goal here is to fix all Typescript warnings and get rid of all uses of the `any` keyword.
+
+## Animals Reference
+
+### `Animal`
+All animals should be classified by what animal `group` they belong to as well as what `color` they are.
+
+### `AnimalGroup`
+There are four animal groups: mammal, bird, fish, and reptile.
+
+### `Bird`
+There are four bird species: ostrich, penguin, owl, and duck. All birds also have a `wingspan` measurement, and have `aquatic` and `flying` properties.
+
+### `Fish`
+There are four fish species: goldfish, salmon, shark, and bass. The fish have a `waterType` property (salt or fresh). Also, the fish have a `size` property (inches from head to tail).
+
+### `Mammal`
+There are four mammal species: human, horse, dolphin, chimpanzee. Each mammal has a `locomotion` property: terrestrial, aquatic, or unknown.
+
+### `Reptile`
+There are four reptile species: crocodile, tortoise, cobra, and gecko. Each reptile has a `legs`, `teeth`, and `fangs` property -- all of which denote whether or not the animal has those things.
